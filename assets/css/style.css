@@ -56,9 +56,9 @@ body.dark {
 
 @font-face {
 
-    font-family: Lexend;
+    font-family: Inter;
 
-    src: url(../assets/fonts/static/Lexend-Regular.ttf);
+    src: url(../assets/fonts/Inter/Inter-Regular.ttf);
 
 }
 
@@ -75,7 +75,7 @@ body.dark {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Open-sans;
+    font-family: Inter;
 }
 
 body {
