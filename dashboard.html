@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BM-Assignment</title>
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./assets/pluggins/quill/quill.snow.css">
+    <link rel="stylesheet" href="./assets/pluggins/select2/css/select2.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
 </head>
 
@@ -18,18 +27,15 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!-- <img src="./assets/brand/logo1.png" alt="logo"> -->B
+                    <img src="./assets/images/logo.svg" alt="logo">
                 </span>
                 <div class="text logo-text">
-                    <!-- <img src="./assets/brand/logo_ltr.png" alt="logo"> -->
-                    Assignment
+                    <img src="./assets/images/logo-text.svg" alt="logo">
                 </div>
             </div>
         </header>
         <div class="toggle_icon">
-            <div class="hr_line">
-                <hr>
-            </div>
+            
             <span class="toggle">
                 <i class="ri-arrow-right-s-line"></i>
             </span>
@@ -50,6 +56,27 @@
                             <i class="ri-file-chart-fill icon"></i>
                             <span class="text nav-text">Assignment</span>
                             <span class="tooltip">Assignment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="list.html">
+                            <i class="ri-file-list-2-fill icon"></i>
+                            <span class="text nav-text">Lists</span>
+                            <span class="tooltip">Lists</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="bookmarks.html">
+                            <i class="ri-bookmark-fill icon"></i>
+                            <span class="text nav-text">Bookmarks</span>
+                            <span class="tooltip">Bookmarks</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class="ri-settings-5-fill icon"></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="tooltip">Settings</span>
                         </a>
                     </li>
                 </ul>
@@ -76,20 +103,190 @@
     <div class="overlay_section"></div>
     <main class="home">
         <section>
-            <div class="main assignment">
+            <div class="main assignment m-l-30">
                 <div class="container-fluid">
                     <div class="row">
-                        <h1>Dashboard</h1>
+                        <div>
+                        <h1 class="heading fs-26 mb-0">Hi Sabeer</h1>
+                        <span class="fs-13">Good morning! Here are the quick statistics</span>
+                    </div>
+                        <div class="d-flex p-t-20 gap-4 ">
+                            <div class="num-section">
+                                <span class="digits fs-26 lh-1  ">350</span>
+                                <span class="fs-12  p-t-3">Students <br> Completed</span>
+                            </div>
+                            <div class="line"></div>
+                            <div class="d-flex gap-5">
+                            
+                                <div class="num-section">
+                                    <span class="digits fs-26 lh-1  ">26</span>
+                                    <span class="fs-12  p-t-3 ">In <br> Progress</span>
+                                    <div class="rounded-circle  circle"></div>
+                                </div>
+                        
+                        
+                            <div class="num-section">
+                                <span class="digits fs-26 lh-1 ">5</span>
+                                <span class="fs-12  p-t-3 ">Needs  <br> Review</span>
+                                <div class="rounded-circle circle1"></div>
+                             </div>
+                <div class="num-section">
+                        <span class="digits fs-26 lh-1 ">26</span>
+                        <span class="fs-12  p-t-3 ">On<br>Hold</span>
+                        <div class="rounded-circle  circle2"></div>
+                        
+                     </div>
+        </div>
+    </div>
+    <div class="d-flex mt-5 gap-5">
+        <h1 class="heading fs-26">Choose Subject </h1>
+        <div class="card-header">
+            <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" >
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#All" role="tab">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " data-toggle="tab" href="#Popular" role="tab">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Relevant" role="tab">Relevant</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#Recentlycreated" role="tab">Recently Created</a>
+              </li>
+            </ul>
+            
+          </div>
+
+    </div>
+    <div class="row active tab-pane " id="All" role="tabpanel ">
+        <div class="col-md-3" >
+            <div class="card p-4  ">
+                <span class="id ">Id 156465</span>
+                <span class=" heading fs-23">Morning/ <br>
+                Kerala/8/B</span>
+
+                <span class="std-text ">Students</span>
+                <div class="d-flex gap-2">
+                <img  src="./assets/images/emoji.webp" alt="">
+                <span class="id">14+</span>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card p-4  ">
+                    <span class="id ">Id 156465</span>
+                    <span class=" heading fs-23">Robotics/ <br>
+                    CBSE/8/B</span>
+    
+                    <span class="std-text">Students</span>
+                    <div class="d-flex gap-2">
+                        <img  src="./assets/images/emoji.webp" alt="">
+                        <span class="id">7+</span>
                     </div>
                 </div>
-            </div>
-        </section>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="card p-4  ">
+                        <span class="id ">Id 156465</span>
+                        <span class=" heading fs-23">Science/ <br>
+                        Kerala/6/B</span>
+        
+                        <span class="std-text">Students</span>
+                        <div class="d-flex gap-2">
+                            <img  src="./assets/images/emoji.webp" alt="">
+                            <span class="id">5+</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="card p-4  ">
+                            <span class="id ">Id 156465</span>
+                            <span class=" heading fs-23">Morning/ <br>
+                            Kerala/8/B</span>
+            
+                            <span class="std-text">Students</span>
+                            <div class="d-flex gap-2">
+                                <img  src="./assets/images/emoji.webp" alt="">
+                                <span class="id">9+</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="card p-4  ">
+                                <span class="id ">Id 156465</span>
+                                <span class=" heading fs-23">Morning/ <br>
+                                Kerala/8/B</span>
+                
+                                <span class="std-text">Students</span>
+                                <div class="d-flex gap-2">
+                                    <img  src="./assets/images/emoji.webp" alt="">
+                                    <span class="id">10+</span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="card p-4  ">
+                                    <span class="id ">Id 156465</span>
+                                    <span class=" heading fs-23">Morning/ <br>
+                                    Kerala/8/B</span>
+                    
+                                    <span class="std-text">Students</span>
+                                    <div class="d-flex gap-2">
+                                        <img  src="./assets/images/emoji.webp" alt="">
+                                        <span class="id">12+</span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <div class="card p-4  ">
+                                        <span class="id ">Id 156465</span>
+                                        <span class=" heading fs-23">Morning/ <br>
+                                        Kerala/8/B</span>
+                        
+                                        <span class="std-text">Students</span>
+                                        <div class="d-flex gap-2">
+                                            <img  src="./assets/images/emoji.webp" alt="">
+                                            <span class="id">8+</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="card p-4  ">
+                                            <span class="id ">Id 156465</span>
+                                            <span class=" heading fs-23">Morning/ <br>
+                                            Kerala/8/B</span>
+                            
+                                            <span class="std-text">Students</span>
+                                            <div class="d-flex gap-2">
+                                                <img  src="./assets/images/emoji.webp" alt="">
+                                                <span class="id">10+</span>
+                                            </div>
+                                        </div>
+                                        </div>
+
+
+    
+        
+
+    </div>
+
+    
+</div>
+</div>
+</section>
     </main>
 
 
     <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
     <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/pluggins/quill/quill.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
     <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>

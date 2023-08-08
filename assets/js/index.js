@@ -36,6 +36,19 @@ $(function () {
     if (dark_mode == "dark") {
         $(body).addClass(dark_mode);
     }
+
+
+    // Select 2 
+    $("#sas").select2({
+        closeOnSelect: false
+    });
+    $("#grade").select2({
+        closeOnSelect: false
+    });
+
+    // Semetic UI Calender 
+    $('#duedate').calendar();
+    $('#sceduleddate').calendar();
 });
 
 
@@ -84,4 +97,9 @@ $(modeSwitch).click(function (e) {
     } else {
         localStorage.setItem("dark_mode", "light");
     }
+});
+
+var quill = new Quill('#description', {
+    placeholder: 'The clearer and the shorter better',
+    theme: 'snow'
 });

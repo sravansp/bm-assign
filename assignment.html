@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BM-Assignment</title>
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./assets/pluggins/quill/quill.snow.css">
+    <link rel="stylesheet" href="./assets/pluggins/select2/css/select2.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
 </head>
 
@@ -18,18 +27,15 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!-- <img src="./assets/brand/logo1.png" alt="logo"> -->B
+                    <img src="./assets/images/logo.svg" alt="logo">
                 </span>
                 <div class="text logo-text">
-                    <!-- <img src="./assets/brand/logo_ltr.png" alt="logo"> -->
-                    Assignment
+                    <img src="./assets/images/logo-text.svg" alt="logo">
                 </div>
             </div>
         </header>
         <div class="toggle_icon">
-            <div class="hr_line">
-                <hr>
-            </div>
+            
             <span class="toggle">
                 <i class="ri-arrow-right-s-line"></i>
             </span>
@@ -50,6 +56,27 @@
                             <i class="ri-file-chart-fill icon"></i>
                             <span class="text nav-text">Assignment</span>
                             <span class="tooltip">Assignment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="list.html">
+                            <i class="ri-file-list-2-fill icon"></i>
+                            <span class="text nav-text">Lists</span>
+                            <span class="tooltip">Lists</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="bookmarks.html">
+                            <i class="ri-bookmark-fill icon"></i>
+                            <span class="text nav-text">Bookmarks</span>
+                            <span class="tooltip">Bookmarks</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class="ri-settings-5-fill icon"></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="tooltip">Settings</span>
                         </a>
                     </li>
                 </ul>
@@ -76,10 +103,177 @@
     <div class="overlay_section"></div>
     <main class="home">
         <section>
-            <div class="main assignment">
+            <div class="main assignment px-3">
                 <div class="container-fluid">
                     <div class="row">
-                        
+                        <div class="col-md-12">
+                            <div class="wrapper-form bg-white rounded-4 p-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div
+                                            class="header-form flex-col gap-3 flex-md-row justify-content-md-between py-3">
+                                            <div class="form-title flex gap-3 flex-m">
+                                                <h1 class="fs-20 mb-0">Create Assignment</h1>
+                                                <div class="pop rounded-5 fs-10">Draft</div>
+                                            </div>
+                                            <div class="form-title-btns flex-sb gap-3 flex-m">
+                                                <button class="flex-sb gap-2 btn rounded-5 fs-13 btn-bm-secondary">
+                                                    <i class="ri-close-line"></i>
+                                                    <span>Cancel</span>
+                                                </button>
+                                                <button class="flex-sb gap-2 btn rounded-5 fs-12 btn-bm-primary">
+                                                    <i class="ri-check-line"></i>
+                                                    <span>Assign</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider-h my-3 w-full"></div>
+
+                                <div class="row">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="left-col h-full">
+                                                    <div class="flex-col mb-3">
+                                                        <label for="title" class="form-label mb-0">Title</label>
+                                                        <small>250 Charachters max</small>
+                                                        <input type="text" class="form-control" id="title"
+                                                            placeholder="Assignment Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="description" class="form-label">Description</label>
+                                                        <div class="standalone-container">
+                                                            <div id="description"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <label for="attach" class="form-label">Attach</label>
+                                                        <div class="attach-wrapper py-4 flex-sa flex-m gap-3">
+                                                            <a href="">
+                                                                <div class="flex-col flex-m gap-2">
+                                                                    <div class="rounded-5 border attach-solo">
+
+                                                                    </div>
+                                                                    <span class="text-black">Drive</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="">
+                                                                <div class="flex-col flex-m gap-2">
+                                                                    <div class="rounded-5 border attach-solo">
+
+                                                                    </div>
+                                                                    <span class="text-black">Youtube</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="">
+                                                                <div class="flex-col flex-m gap-2">
+                                                                    <div class="rounded-5 border attach-solo">
+
+                                                                    </div>
+                                                                    <span class="text-black">Create</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="">
+                                                                <div class="flex-col flex-m gap-2">
+                                                                    <div class="rounded-5 border attach-solo">
+
+                                                                    </div>
+                                                                    <span class="text-black">Upload</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="">
+                                                                <div class="flex-col flex-m gap-2">
+                                                                    <div class="rounded-5 border attach-solo">
+
+                                                                    </div>
+                                                                    <span class="text-black">Link</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 flex-c">
+                                                <div class="divider-v h-full"></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="right-col h-full">
+                                                    <div class="mb-4">
+                                                        <label for="sas" class="form-label">Select Assignment
+                                                            Status</label>
+                                                        <select class="form-control" id="sas">
+                                                            <option>Published</option>
+                                                            <option>Sceduled</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label for="grade" class="form-label">Grade</label>
+                                                        <select class="form-control" id="grade">
+                                                            <option>1</option>
+                                                            <option>5</option>
+                                                            <option>10</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label for="duedate" class="form-label">Due Date & Time</label>
+                                                        <div class="ui calendar" id="duedate">
+                                                            <div class="ui input left icon w-full">
+                                                                <i class="calendar icon"></i>
+                                                                <input type="text" placeholder="Due Date/Time">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label for="sceduleddate" class="form-label">Sceduled Date &
+                                                            Time</label>
+                                                        <div class="ui calendar" id="sceduleddate">
+                                                            <div class="ui input left icon w-full">
+                                                                <i class="calendar icon"></i>
+                                                                <input type="text" placeholder="Sceduled Date/Time">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <label for="students" class="form-label">Select Students</label>
+                                                        <div class="d-flex gap-3">
+                                                            <button
+                                                                class="flex-sb gap-2 btn rounded-5 fs-12 btn-bm-primary"
+                                                                type="button" data-bs-toggle="offcanvas"
+                                                                data-bs-target="#offcanvasRight"
+                                                                aria-controls="offcanvasRight">
+                                                                <i class="ri-add-fill"></i>
+                                                                <span>Choose</span>
+                                                            </button>
+                                                            <div class="count-img d-flex flex-m gap-3">
+                                                                <img class="w-full" src="./assets/images/emoji.webp"
+                                                                    alt="">
+                                                                <div><span id="count">14</span>+</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1"
+                                                        id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                                        <div class="offcanvas-header">
+                                                            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                                                            <button type="button" class="close-offcanvas btn"
+                                                                data-bs-dismiss="offcanvas" aria-label="Close">
+                                                                <i class="ri-close-line"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="offcanvas-body">
+                                                            ...
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +283,13 @@
 
     <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
     <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/pluggins/quill/quill.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
     <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>
