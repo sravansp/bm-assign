@@ -1,5 +1,5 @@
 const body = document.querySelector("body"),
-    sidebar = body.querySelector("nav"),
+    sidebar = body.querySelector(".sidebar"),
     sidebarToggle = body.querySelector(".app-sidebar__toggle"),
     toggle = body.querySelector(".toggle"),
     searchBtn = body.querySelector(".search-box"),

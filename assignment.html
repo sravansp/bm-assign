@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/util.css">
 
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
 </head>
 
@@ -35,7 +34,7 @@
             </div>
         </header>
         <div class="toggle_icon">
-            
+
             <span class="toggle">
                 <i class="ri-arrow-right-s-line"></i>
             </span>
@@ -151,42 +150,43 @@
                                                     <div class="">
                                                         <label for="attach" class="form-label">Attach</label>
                                                         <div class="attach-wrapper py-4 flex-sa flex-m gap-3">
-                                                            <a href="">
+                                                            <a href="" data-bs-toggle="modal"
+                                                                data-bs-target="#driveModal">
                                                                 <div class="flex-col flex-m gap-2">
                                                                     <div class="rounded-5 border attach-solo">
-
+                                                                        <img class="w-60p" src="./assets/images/1.png"
+                                                                            alt="">
                                                                     </div>
                                                                     <span class="text-black">Drive</span>
                                                                 </div>
                                                             </a>
-                                                            <a href="">
+                                                            <a href="" data-bs-toggle="modal"
+                                                                data-bs-target="#youtubeModal">
                                                                 <div class="flex-col flex-m gap-2">
                                                                     <div class="rounded-5 border attach-solo">
-
+                                                                        <img class="w-60p" src="./assets/images/2.png"
+                                                                            alt="">
                                                                     </div>
                                                                     <span class="text-black">Youtube</span>
                                                                 </div>
                                                             </a>
-                                                            <a href="">
+
+                                                            <a href="" data-bs-toggle="modal"
+                                                                data-bs-target="#uploadModal">
                                                                 <div class="flex-col flex-m gap-2">
                                                                     <div class="rounded-5 border attach-solo">
-
-                                                                    </div>
-                                                                    <span class="text-black">Create</span>
-                                                                </div>
-                                                            </a>
-                                                            <a href="">
-                                                                <div class="flex-col flex-m gap-2">
-                                                                    <div class="rounded-5 border attach-solo">
-
+                                                                        <img class="w-60p" src="./assets/images/3.png"
+                                                                            alt="">
                                                                     </div>
                                                                     <span class="text-black">Upload</span>
                                                                 </div>
                                                             </a>
-                                                            <a href="">
+                                                            <a href="" data-bs-toggle="modal"
+                                                                data-bs-target="#linkModal">
                                                                 <div class="flex-col flex-m gap-2">
                                                                     <div class="rounded-5 border attach-solo">
-
+                                                                        <img class="w-60p" src="./assets/images/4.png"
+                                                                            alt="">
                                                                     </div>
                                                                     <span class="text-black">Link</span>
                                                                 </div>
@@ -254,17 +254,60 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1"
-                                                        id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                                        <div class="offcanvas-header">
-                                                            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                                                    <div class="offcanvas offcanvas-end select-students-offcanvas"
+                                                        tabindex="-1" id="offcanvasRight"
+                                                        aria-labelledby="offcanvasRightLabel">
+                                                        <div class="offcanvas-header flex-r">
+
                                                             <button type="button" class="close-offcanvas btn"
                                                                 data-bs-dismiss="offcanvas" aria-label="Close">
                                                                 <i class="ri-close-line"></i>
                                                             </button>
                                                         </div>
                                                         <div class="offcanvas-body">
-                                                            ...
+                                                            <div class="p-4 flex-col gap-4">
+                                                                <h5 class="fw-bold fs-15 mb-0">Select Students</h5>
+                                                                <p class="fs-11 fw-light">Select the student from the
+                                                                    list below</p>
+                                                                <div class="search-student d-flex">
+                                                                    <i class="ri-search-line px-3 fs-19"></i>
+                                                                    <input type="text" placeholder="Search student"
+                                                                        class="bg-transparent search-student-field">
+                                                                </div>
+                                                                <div class="table-responsive">
+                                                                    <table
+                                                                        class="table table-borderless text-white fs-11">
+                                                                        <thead>
+                                                                            <tr>
+
+                                                                                <th scope="col"
+                                                                                    class="text-bm-primary fs-11 fw-bold">
+                                                                                    Name</th>
+                                                                                <th scope="col" class="fs-11 fw-light">
+                                                                                    Select all</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Sit</td>
+                                                                                <td><input type="checkbox" name=""
+                                                                                        id=""></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Adipisicing</td>
+                                                                                <td><input type="checkbox" name=""
+                                                                                        id=""></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Hic</td>
+                                                                                <td><input type="checkbox" name=""
+                                                                                        id=""></td>
+                                                                            </tr>
+                                                                        </tbody>
+
+                                                                    </table>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -278,6 +321,79 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="driveModal" tabindex="-1" aria-labelledby="driveModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="driveModalLabel">Share Drive Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="youtubeModal" tabindex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="youtubeModalLabel">Share Youtube Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="uploadModalLabel">Upload File</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="linkModal" tabindex="-1" aria-labelledby="linkModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="linkModalLabel">Share Your Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn  btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -288,6 +404,7 @@
     <script
         src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
     </script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
 
 </body>
