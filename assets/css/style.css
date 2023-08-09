@@ -80,7 +80,9 @@ h3,
 p {
     margin: 0;
 }
-
+a {
+    text-decoration: none !important;
+}
 .btn-bm-primary {
     /* border: 1px solid #727272; */
     background-color: var(--primary-color);
@@ -328,13 +330,13 @@ body.dark .sidebar .toggle_icon .toggle {
     background-color: var(--primary-color-rgb-op);
 } */
 
-.sidebar li a:hover .icon,
+/* .sidebar li a:hover .icon,
 .sidebar li a:hover .text,
 .sidebar li.active .icon,
 .sidebar li.active .text {
     color: var(--sidebar-text-color);
     font-weight: 600;
-}
+} */
 
 .sidebar li:has(> a:hover) {
     opacity: 1;
@@ -358,16 +360,6 @@ body.dark .sidebar .toggle_icon .toggle {
     transition: 0s;
 }
 
-/* .sidebar li .tooltip:after {
-    content: "";
-    position: absolute;
-    left: -13px;
-    top: 9px;
-    transition: 0.4s;
-    border-top: 8px solid transparent;
-    border-right: 17px solid var(--tooltip-bg);
-    border-bottom: 8px solid transparent;
-} */
 
 .sidebar li:hover .tooltip {
     opacity: 1;
@@ -471,7 +463,7 @@ body.dark .mode .sun-moon i.moon {
 }
 
 .main {
-    padding-top: 75px;
+    /* padding-top: 75px; */
     padding-bottom: 35px;
 }
 
@@ -610,11 +602,11 @@ body.dark .home .text {
     padding: 9px;
     text-align: center;
     height: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1;
     position: relative;
-    background: var(--sidebar-color);
-    color: var(--text-color2) !important;
+    background: var(--primary-color);
+    color: var(--primary-color-light) !important;
     border-radius: 50%;
     box-shadow: 0px 2px 3px rgb(4 4 7 / 10%);
 }
@@ -643,8 +635,9 @@ body.dark .home .text {
     box-shadow: 0 10px 40px 0 rgb(104 113 123 / 30%);
     border: 1px solid #eaedf1;
 }
-
-/* Navbar fixed top 13/02/2023  */
+.navbar_container .breadcrumb {
+    margin-bottom: 0;
+}
 .fixed-top {
     top: -40px;
     transform: translateY(40px);
@@ -1089,22 +1082,24 @@ body.dark .home .text {
     color: #000;
 }
 
-.nav-tabs>.nav-item>.nav-link:hover {
+.card-header .nav-tabs>.nav-item>.nav-link:hover {
     background-color: var(--primary-color);
 
     color: white;
 }
 
-.nav-tabs {
+.card-header .nav-tabs {
     border-bottom: none;
 }
-
-.card-header ul {
-    gap: 30px;
+@media screen and (min-width:1024px) {
+    
+    .card-header ul {
+        gap: 30px;
+    }
 }
 
-.nav-item .nav-link,
-.nav-tabs .nav-link {
+.card-header .nav-item .nav-link,
+.card-header .nav-tabs .nav-link {
     -webkit-transition: all 300ms ease 0s;
 
     -moz-transition: all 300ms ease 0s;
@@ -1115,8 +1110,11 @@ body.dark .home .text {
 
     transition: all 300ms ease 0s;
     border-radius: 30px;
-}
 
+}
+.card-header .nav-link:focus, .nav-link:hover {
+    color: black;
+}
 .wrapper-form {
     box-shadow: 0px 3.8625547885894775px 3.8625547885894775px 0px #0000000d;
     min-height: 90vh;
