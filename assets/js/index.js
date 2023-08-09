@@ -6,11 +6,13 @@ const body = document.querySelector("body"),
     modeSwitch = body.querySelector(".toggle-switch"),
     modeText = body.querySelector(".mode-text");
 
-
+$(window).on('load', function () {
+    // setTimeout(function () { // allowing 3 secs to fade out loader
+    $('.preloader').fadeOut('slow');
+    // }, 1000);
+});
 
 $(function () {
-
-
     $(".sidebar li")
         .find("a")
         .each(function () {
@@ -98,8 +100,65 @@ $(modeSwitch).click(function (e) {
         localStorage.setItem("dark_mode", "light");
     }
 });
+if (document.querySelector("#description")) {
+    
+    var quill = new Quill('#description', {
+        placeholder: 'The clearer and the shorter better',
+        theme: 'snow'
+    });
+}
+ScrollRevealaAm()
+/*===== SCROLL REVEAL ANIMATION =====*/
+function ScrollRevealaAm() {
+    const sr = ScrollReveal({
+        distance: "60px",
+    });
 
-var quill = new Quill('#description', {
-    placeholder: 'The clearer and the shorter better',
-    theme: 'snow'
-});
+    sr.reveal(".form-title", {
+        duration: 1000,
+        delay: 300,
+        origin: "left",
+        //   reset: false,
+    });
+    sr.reveal(".form-title-btns button", {
+        duration: 1000,
+        interval: 100,
+        delay: 300,
+        origin: "right",
+        //   reset: true,
+    });
+
+    sr.reveal(".left-col-contents", {
+        delay: 350,
+        interval: 100,
+        origin: "bottom",
+    });
+    sr.reveal(".right-col-contents", {
+        delay: 450,
+        interval: 100,
+        origin: "bottom",
+    });
+
+    sr.reveal(".attach-wrapper a", {
+        delay: 450,
+        duration: 800,
+        interval: 100,
+        origin: "bottom",
+        reset: false,
+    });
+
+    sr.reveal(".animated-dash", {
+        origin: "bottom",
+        delay: 200,
+        duration: 800,
+        interval: 80,
+        reset: false,
+    });
+    sr.reveal(".card.subjects", {
+        origin: "bottom",
+        delay: 300,
+        duration: 800,
+        interval: 80,
+        reset: false,
+    });
+}

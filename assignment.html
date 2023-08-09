@@ -95,18 +95,28 @@
     <!-- Sidebar End  -->
     <header>
         <div class="navbar">
-            <div class="navbar_container"></div>
+            <div class="navbar_container">
+                <div class="breadcrumb-wrapper">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item"><a href="#">Library</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                      </nav>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="overlay_section"></div>
     <main class="home">
         <section>
-            <div class="main assignment px-3">
+            <div class="main assignment px-4">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="wrapper-form bg-white rounded-4 p-4">
+                            <div class="wrapper-form bg-white rounded-4 p-4 overflow-hidden">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div
@@ -135,19 +145,19 @@
                                         <div class="row">
                                             <div class="col-md-7">
                                                 <div class="left-col h-full">
-                                                    <div class="flex-col mb-3">
+                                                    <div class="flex-col mb-3 left-col-contents">
                                                         <label for="title" class="form-label mb-0">Title</label>
                                                         <small>250 Charachters max</small>
                                                         <input type="text" class="form-control" id="title"
                                                             placeholder="Assignment Title">
                                                     </div>
-                                                    <div class="mb-3">
+                                                    <div class="mb-3 left-col-contents">
                                                         <label for="description" class="form-label">Description</label>
                                                         <div class="standalone-container">
                                                             <div id="description"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="">
+                                                    <div class=" left-col-contents">
                                                         <label for="attach" class="form-label">Attach</label>
                                                         <div class="attach-wrapper py-4 flex-sa flex-m gap-3">
                                                             <a href="" data-bs-toggle="modal"
@@ -200,7 +210,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="right-col h-full">
-                                                    <div class="mb-4">
+                                                    <div class="mb-4 right-col-contents">
                                                         <label for="sas" class="form-label">Select Assignment
                                                             Status</label>
                                                         <select class="form-control" id="sas">
@@ -208,7 +218,7 @@
                                                             <option>Sceduled</option>
                                                         </select>
                                                     </div>
-                                                    <div class="mb-4">
+                                                    <div class="mb-4 right-col-contents">
                                                         <label for="grade" class="form-label">Grade</label>
                                                         <select class="form-control" id="grade">
                                                             <option>1</option>
@@ -216,7 +226,7 @@
                                                             <option>10</option>
                                                         </select>
                                                     </div>
-                                                    <div class="mb-4">
+                                                    <div class="mb-4 right-col-contents">
                                                         <label for="duedate" class="form-label">Due Date & Time</label>
                                                         <div class="ui calendar" id="duedate">
                                                             <div class="ui input left icon w-full">
@@ -225,7 +235,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-4">
+                                                    <div class="mb-4 right-col-contents">
                                                         <label for="sceduleddate" class="form-label">Sceduled Date &
                                                             Time</label>
                                                         <div class="ui calendar" id="sceduleddate">
@@ -236,7 +246,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div>
+                                                    <div class="right-col-contents">
                                                         <label for="students" class="form-label">Select Students</label>
                                                         <div class="d-flex gap-3">
                                                             <button
@@ -396,7 +406,9 @@
         </div>
     </main>
 
-
+    <div class="preloader">
+        <span class="loader"></span>
+    </div>
     <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
     <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/pluggins/quill/quill.min.js"></script>
