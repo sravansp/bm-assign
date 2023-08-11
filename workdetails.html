@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM-Assignment</title>
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./assets/pluggins/quill/quill.snow.css">
+    <link rel="stylesheet" href="./assets/pluggins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./assets/images/logo.svg" alt="logo">
+                </span>
+                <div class="text logo-text">
+                    <img src="./assets/images/logo-text.svg" alt="logo">
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links ps-0">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class="ri-dashboard-fill icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                            <span class="tooltip">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="assignment.html">
+                            <i class="ri-file-chart-fill icon"></i>
+                            <span class="text nav-text">Assignment</span>
+                            <span class="tooltip">Assignment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="list.html">
+                            <i class="ri-file-list-2-fill icon"></i>
+                            <span class="text nav-text">Lists</span>
+                            <span class="tooltip">Lists</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="bookmarks.html">
+                            <i class="ri-bookmark-fill icon"></i>
+                            <span class="text nav-text">Bookmarks</span>
+                            <span class="tooltip">Bookmarks</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class="ri-settings-5-fill icon"></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="tooltip">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="ri-login-box-line icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+        <nav id="navbar_top" class="navbar navbar-fixed-top px-4">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-4-line text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section>
+            <div class="main assignment px-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wrapper-form bg-white rounded-4 p-4 overflow-hidden">
+                                <div class="row">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="left-col h-full">
+                                                    <div class="all_exams_section">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="subject_filter mt-3 mt-sm-0">
+                                                                    <div class="nav nav-tabs fs-11">
+                                                                        <a class="nav-link active fs-11 filter_link"
+                                                                            href="#" data-filter="all">All Students</a>
+                                                                        <a class="nav-link fs-11 filter_link" href="#"
+                                                                            data-filter="completed">Completed</a>
+                                                                        <a class="nav-link fs-11 filter_link" href="#"
+                                                                            data-filter="assigned">Assigned</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-4">
+                                                            <div class="col-md-12">
+                                                                <div class="subjects_xam">
+                                                                    <div class="tab-content mt-3">
+                                                                        <div class="students_ completed mb-4">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-12">
+                                                                                    <div class="flex-sb">
+                                                                                        <div
+                                                                                        class="subject_name text_black">
+                                                                                        <span>Science</span>
+                                                                                    </div>
+                                                                                    <div class="flex flex-cb">
+                                                                                        <i class="ri-attachment-2"></i>
+                                                                                        <span>4</span>
+                                                                                        <i class="ri-arrow-right-s-line"></i>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 flex-c">
+                                                <div class="divider-v h-full"></div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="right-col h-full">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="driveModal" tabindex="-1" aria-labelledby="driveModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="driveModalLabel">Share Drive Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="youtubeModal" tabindex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="youtubeModalLabel">Share Youtube Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="uploadModalLabel">Upload File</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="linkModal" tabindex="-1" aria-labelledby="linkModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="linkModalLabel">Share Your Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn  btn-bm-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="preloader">
+        <span class="loader"></span>
+    </div>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/pluggins/quill/quill.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

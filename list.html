@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM-Assignment</title>
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./assets/pluggins/quill/quill.snow.css">
+    <link rel="stylesheet" href="./assets/pluggins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./assets/images/logo.svg" alt="logo">
+                </span>
+                <div class="text logo-text">
+                    <img src="./assets/images/logo-text.svg" alt="logo">
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links ps-0">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class="ri-dashboard-fill icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                            <span class="tooltip">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="assignment.html">
+                            <i class="ri-file-chart-fill icon"></i>
+                            <span class="text nav-text">Assignment</span>
+                            <span class="tooltip">Assignment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="list.html">
+                            <i class="ri-file-list-2-fill icon"></i>
+                            <span class="text nav-text">Lists</span>
+                            <span class="tooltip">Lists</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="bookmarks.html">
+                            <i class="ri-bookmark-fill icon"></i>
+                            <span class="text nav-text">Bookmarks</span>
+                            <span class="tooltip">Bookmarks</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class="ri-settings-5-fill icon"></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="tooltip">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="ri-login-box-line icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+        <nav id="navbar_top" class="navbar navbar-fixed-top px-4">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper acco-items d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-4-line text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section>
+            <div class="main assignment px-4">
+                <div class="container-fluid">
+                    <div class="row gap-3">
+                        <div class="col-md-12">
+                            <div class="flex-sb flex-m">
+                                <div class="text-heading">
+                                    <h1 class="fs-22 fw-bold">Assignment List</h1>
+                                </div>
+                                <a href="" class="flex gap-2 btn rounded-5 fs-12 btn-bm-primary btn-right">
+                                    <i class="ri-add-fill"></i>
+                                    <span>Create</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-1">
+                            <div class="content_body">
+                                <div class="content_items">
+                                    <div class="container_accordian">
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">What did say
+                                                            as a kid when
+                                                            asked: What do you want to be when you grow up?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-sa-m gap-3 h-full justify-content-md-start">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">If you could
+                                                            change careers right this second, what would you do?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-m gap-3 h-full">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">What’s your
+                                                            very first memory?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-m gap-3 h-full">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">What makes you
+                                                            happiest?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-m gap-3 h-full">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">If you could
+                                                            visit one planet, which would it be?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-m gap-3 h-full">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper acco-items bg-white">
+                                            <button class="toggle_acco pos-relative">
+                                                <div class="flex-col flex-md-row flex-sb w-full row g-3">
+                                                    <div
+                                                        class="flex gap-3 align-items-start align-items-md-center col-md-9 alig">
+                                                        <div class="toggle_icon_acco p-1 bg-pr">
+                                                            <i class="ri-menu-2-line fs-19"></i>
+                                                        </div>
+                                                        <span class="fs-14 fw-bold text_black text-start">When is the
+                                                            last time you can remember feeling totally at peace?</span>
+                                                    </div>
+                                                    <div class="gap-3 flex-m col-md-3">
+                                                        <div class="pop rounded-5 fs-10 px-3 bm-warning text-black">Due
+                                                        </div>
+                                                        <span id="dateandtime"
+                                                            class="fs-12 text-nowrap text-bm-secondary-light">Aug 22,
+                                                            12:10 PM</span>
+
+                                                    </div>
+                                                </div>
+                                                <i class="ri-arrow-down-s-line fs-20 icon_ text-bm-secondary-light"></i>
+                                            </button>
+
+                                            <div class="content_acco">
+                                                <div class="row gap-3 gap-md-0">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="d-flex gap-3">
+                                                                <span class="fs-12 text-bm-secondary-light">Posted Aug
+                                                                    4</span>
+                                                                <div class="count-img d-flex flex-m gap-3">
+                                                                    <img class="w-full" src="./assets/images/emoji.webp"
+                                                                        alt="">
+                                                                    <div><span id="count">7</span>+</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-3">
+                                                            <div class="col-md-12">
+                                                                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                                                                    mattis. Class aptent taciti sociosqu ad litora torquent
+                                                                    per conubia nostra, per inceptos himenaeos dolor sit
+                                                                    amet, consectetur adipiscing elit. Nunc vulputate libero
+                                                                    et velit interdum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="flex-m gap-3 h-full">
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">2</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Completed</span>
+                                                            </a>
+                                                            <a href="./workdetails.html" class="flex-col acco-card flex-c-m">
+                                                                <h1 class="fs-38">7</h1>
+                                                                <span
+                                                                    class="text-bm-secondary-light fs-12">Assigned</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="preloader">
+        <span class="loader"></span>
+    </div>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/pluggins/quill/quill.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

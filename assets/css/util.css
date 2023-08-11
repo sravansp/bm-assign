@@ -4880,6 +4880,19 @@
 
 /* ------------------------------------ */
 
+.flex {
+
+	display: -webkit-box;
+
+	display: -webkit-flex;
+
+	display: -moz-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+
+}
 .flex-w {
 
 	display: -webkit-box;
@@ -7471,6 +7484,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 }
 .w-60p {
 	width: 60%;
+}
+.w-95p {
+	width: 95%;
 }
 
 /*[ Hover ]

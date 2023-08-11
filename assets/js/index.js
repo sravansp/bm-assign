@@ -107,6 +107,80 @@ if (document.querySelector("#description")) {
         theme: 'snow'
     });
 }
+
+
+initAccordian()
+function initAccordian() {
+    let toggles = document.getElementsByClassName("toggle_acco");
+    let contentDiv = document.getElementsByClassName("content_acco");
+    let icons = document.getElementsByClassName("icon_");
+  
+    for (let i = 0; i < toggles.length; i++) {
+        contentDiv[0].classList.add("acco-expand");
+        contentDiv[0].style.height = contentDiv[i].scrollHeight + "px";
+      toggles[i].addEventListener("click", () => {
+        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+          contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+          icons[i].classList.remove("ri-arrow-down-s-line");
+          icons[i].classList.add("ri-arrow-up-s-line");
+          contentDiv[i].classList.add("acco-expand");
+        } else {
+          contentDiv[i].style.height = "0px";
+          icons[i].classList.remove("ri-arrow-up-s-line");
+          icons[i].classList.add("ri-arrow-down-s-line");
+          contentDiv[i].classList.remove("acco-expand");
+        }
+  
+        for (let j = 0; j < contentDiv.length; j++) {
+          if (j !== i) {
+            contentDiv[j].style.height = "0px";
+            icons[j].classList.remove("ri-arrow-up-s-line");
+            icons[j].classList.add("ri-arrow-down-s-line");
+            contentDiv[j].classList.remove("acco-expand");
+          }
+        }
+      });
+    }
+
+  }
+
+/*=============== FILTER students IN DASHBOARD ===============*/
+var $students_ = $('.students_');
+
+var $btns = $('.filter_link').click(function (e) {
+    e.preventDefault();
+    $btns.removeClass('active');
+    $(this).addClass('active');
+
+    var filterVal = $(this).data('filter');
+
+    if (filterVal === 'all') {
+        $students_.show();
+    } else {
+        $students_.hide().filter('.' + filterVal).show();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ScrollRevealaAm()
 /*===== SCROLL REVEAL ANIMATION =====*/
 function ScrollRevealaAm() {
@@ -114,13 +188,13 @@ function ScrollRevealaAm() {
         distance: "60px",
     });
 
-    sr.reveal(".form-title", {
+    sr.reveal(".form-title,.text-heading", {
         duration: 1000,
         delay: 300,
         origin: "left",
         //   reset: false,
     });
-    sr.reveal(".form-title-btns button", {
+    sr.reveal(".form-title-btns button,.btn-right", {
         duration: 1000,
         interval: 100,
         delay: 300,
@@ -154,7 +228,7 @@ function ScrollRevealaAm() {
         interval: 80,
         reset: false,
     });
-    sr.reveal(".card.subjects", {
+    sr.reveal(".card.subjects,.container_accordian .wrapper", {
         origin: "bottom",
         delay: 300,
         duration: 800,
