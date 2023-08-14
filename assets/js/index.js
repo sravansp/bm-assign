@@ -24,10 +24,7 @@ $(function () {
                 $(this).parents("li").removeClass("active");
             }
         });
-    //table row CLICKABLE
-    $(".clickable-row").click(function () {
-        window.location = $(this).data("href");
-    });
+
 
     var side_close = localStorage.getItem("side_close");
     if (side_close == "open") {
@@ -101,7 +98,7 @@ $(modeSwitch).click(function (e) {
     }
 });
 if (document.querySelector("#description")) {
-    
+
     var quill = new Quill('#description', {
         placeholder: 'The clearer and the shorter better',
         theme: 'snow'
@@ -110,44 +107,46 @@ if (document.querySelector("#description")) {
 
 
 initAccordian()
+
 function initAccordian() {
     let toggles = document.getElementsByClassName("toggle_acco");
     let contentDiv = document.getElementsByClassName("content_acco");
     let icons = document.getElementsByClassName("icon_");
-  
+
     for (let i = 0; i < toggles.length; i++) {
         contentDiv[0].classList.add("acco-expand");
         contentDiv[0].style.height = contentDiv[i].scrollHeight + "px";
-      toggles[i].addEventListener("click", () => {
-        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
-          contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
-          icons[i].classList.remove("ri-arrow-down-s-line");
-          icons[i].classList.add("ri-arrow-up-s-line");
-          contentDiv[i].classList.add("acco-expand");
-        } else {
-          contentDiv[i].style.height = "0px";
-          icons[i].classList.remove("ri-arrow-up-s-line");
-          icons[i].classList.add("ri-arrow-down-s-line");
-          contentDiv[i].classList.remove("acco-expand");
-        }
-  
-        for (let j = 0; j < contentDiv.length; j++) {
-          if (j !== i) {
-            contentDiv[j].style.height = "0px";
-            icons[j].classList.remove("ri-arrow-up-s-line");
-            icons[j].classList.add("ri-arrow-down-s-line");
-            contentDiv[j].classList.remove("acco-expand");
-          }
-        }
-      });
+        toggles[i].addEventListener("click", () => {
+            if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+                contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+                icons[i].classList.remove("ri-arrow-down-s-line");
+                icons[i].classList.add("ri-arrow-up-s-line");
+                contentDiv[i].classList.add("acco-expand");
+            } else {
+                contentDiv[i].style.height = "0px";
+                icons[i].classList.remove("ri-arrow-up-s-line");
+                icons[i].classList.add("ri-arrow-down-s-line");
+                contentDiv[i].classList.remove("acco-expand");
+            }
+
+            for (let j = 0; j < contentDiv.length; j++) {
+                if (j !== i) {
+                    contentDiv[j].style.height = "0px";
+                    icons[j].classList.remove("ri-arrow-up-s-line");
+                    icons[j].classList.add("ri-arrow-down-s-line");
+                    contentDiv[j].classList.remove("acco-expand");
+                }
+            }
+        });
     }
 
-  }
+}
 
 /*=============== FILTER students IN DASHBOARD ===============*/
 var $students_ = $('.students_');
 
 var $btns = $('.filter_link').click(function (e) {
+
     e.preventDefault();
     $btns.removeClass('active');
     $(this).addClass('active');
@@ -159,10 +158,25 @@ var $btns = $('.filter_link').click(function (e) {
     } else {
         $students_.hide().filter('.' + filterVal).show();
     }
+
 });
+var students_ = $('.students_').click(function (e) {
+    e.preventDefault();
+    students_.removeClass('active_student');
+    $(this).addClass('active_student');
+    $('#modalAssign').show();
+    ScrollReveal().reveal(".submited-item ", {
+        origin: "bottom",
+        delay: 200,
+        duration: 800,
+        interval: 80,
 
-
-
+        distance: "60px",
+    });
+});
+$('#hidemodalAssign').click(function () {
+    $('#modalAssign').hide();
+});
 
 
 
@@ -192,7 +206,7 @@ function ScrollRevealaAm() {
         duration: 1000,
         delay: 300,
         origin: "left",
-        //   reset: false,
+        //   
     });
     sr.reveal(".form-title-btns button,.btn-right", {
         duration: 1000,
@@ -218,21 +232,21 @@ function ScrollRevealaAm() {
         duration: 800,
         interval: 100,
         origin: "bottom",
-        reset: false,
+
     });
 
-    sr.reveal(".animated-dash", {
+    sr.reveal(".animated-dash,.student_filter a", {
         origin: "bottom",
         delay: 200,
         duration: 800,
         interval: 80,
-        reset: false,
+
     });
-    sr.reveal(".card.subjects,.container_accordian .wrapper", {
+    sr.reveal(".card.subjects,.container_accordian .wrapper,.students_", {
         origin: "bottom",
         delay: 300,
         duration: 800,
         interval: 80,
-        reset: false,
+
     });
 }

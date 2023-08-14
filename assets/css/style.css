@@ -1036,7 +1036,7 @@ body.dark .home .text {
     flex-direction: column;
 
     gap: 20px;
-} 
+}
 
 .subjects:hover {
     border-color: var(--primary-color);
@@ -1140,6 +1140,7 @@ body.dark .home .text {
 .wrapper-form {
     box-shadow: 0px 3.8625547885894775px 3.8625547885894775px 0px #0000000d;
     min-height: 90vh;
+    position: relative;
 }
 
 .wrapper-form label {
@@ -1588,16 +1589,14 @@ body.dark .home .text {
     width: 24px;
 }
 
-
-
-.all_exams_section .subject_filter .nav-tabs {
+.all_student_section .student_filter .nav-tabs {
     border-bottom: none;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-.all_exams_section .subject_filter .nav-tabs .nav-link.active,
-.all_exams_section .subject_filter .nav-tabs .nav-link.active:hover {
+.all_student_section .student_filter .nav-tabs .nav-link.active,
+.all_student_section .student_filter .nav-tabs .nav-link.active:hover {
     background: var(--primary-color);
     border-radius: 30px;
     color: var(--primary-color-light);
@@ -1610,7 +1609,7 @@ body.dark .home .text {
     white-space: nowrap;
 }
 
-/* .all_exams_section .subject_filter .nav-tabs .nav-link.active::after {
+/* .all_student_section .student_filter .nav-tabs .nav-link.active::after {
     content: "";
     width: 6px;
     height: 6px;
@@ -1622,12 +1621,12 @@ body.dark .home .text {
     transform: translate(-37%, 0);
   } */
 
-.all_exams_section .subject_filter .nav-tabs .nav-link:hover {
+.all_student_section .student_filter .nav-tabs .nav-link:hover {
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
 
-.all_exams_section .subject_filter .nav-tabs .nav-link {
+.all_student_section .student_filter .nav-tabs .nav-link {
     color: var(--primary-color);
     border-radius: 30px;
     font-weight: 600;
@@ -1638,20 +1637,97 @@ body.dark .home .text {
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
-.all_exams_section .search_subject .search_box_sub {
-    height: 39px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.all_student_section .student_tab {
+    height: 75vh;
+    overflow: scroll;
 }
 
-.all_exams_section .search_subject .search_box_sub input {
-    border: none;
-    outline: none;
+.all_student_section .student_tab .students_ {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.all_student_section .student_tab .students_:hover {
+    border: 1px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.all_student_section .student_tab .students_.active_student {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.all_student_section .student_tab .students_.active_student .icon-right {
+    color: var(--primary-color);
+
+}
+
+.wrapper_assignment .card {
+    width: 84px;
+    height: 84px;
+    border-radius: 9px;
+    border: 1px solid #D9D9D9;
+    transition: 0.3s;
+
+}
+
+.right-col .modal-asignment {
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    background: #fff;
+    z-index: 500;
+    position: absolute;
+    display: none;
 
+}
+
+.right-col .modal-asignment #hidemodalAssign:hover i {
+    color: var(--primary-color);
+    transition: 0.3s;
+
+}
+
+.right-col .modal-asignment .group_assign {
+    border-radius: 8px;
+    border: 1px solid #D2D5DA;
+    background: #FFF;
+    height: 44px;
+
+}
+
+.right-col .modal-asignment .group_assign .img-assign {
+    width: 70px;
+}
+
+.right-col .modal-asignment .group_assign .data_,
+.right-col .modal-asignment .group_assign .data_ a {
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.right-col .modal-asignment .group_assign .img-assign img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.right-col .modal-asignment .submited-content {
+    height: 70vh;
+    overflow: scroll;
+
+}
+
+@media screen and (min-width:768px) {
+    .workdetails .right-col {
+        position: relative;
+    }
 }
