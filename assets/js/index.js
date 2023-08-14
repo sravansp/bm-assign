@@ -114,8 +114,8 @@ function initAccordian() {
     let icons = document.getElementsByClassName("icon_");
 
     for (let i = 0; i < toggles.length; i++) {
-        contentDiv[0].classList.add("acco-expand");
         contentDiv[0].style.height = contentDiv[i].scrollHeight + "px";
+        contentDiv[0].classList.add("acco-expand");
         toggles[i].addEventListener("click", () => {
             if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
                 contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
