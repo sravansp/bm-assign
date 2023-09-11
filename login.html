@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM-Assignment</title>
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+    <link rel="stylesheet" href="./assets/pluggins/quill/quill.snow.css">
+    <link rel="stylesheet" href="./assets/pluggins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="main_login">
+            <div class="login_img">
+                <div class="left_container">
+                    <div class="logo_wrapper">
+                        <img src="./assets/images/brand/Logo.png" alt="">
+                    </div>
+                    <div class="centerImage">
+                        <div class="animated_main">
+                            <div class="dashed_line">
+                                <div id="rotator"></div>
+                            </div>
+                            <div class="centerellips">
+                                <!-- <div class="imgparent">
+
+</div> -->
+                                <img src="./assets/images/Businessman.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="polygon1">
+                        <img src="./assets/images/Pattern.svg" alt="">
+                    </div>
+                    <div class="polygon2">
+                        <img src="./assets/images/Polygon.svg" alt="">
+                    </div>
+                    <div class="polygon3">
+                        <img src="./assets/images/Polygon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="login_container">
+                <div class="main_div" id="user_login">
+                    <div class="title-h">
+                        <h1>Welcome to</h1>
+                        <img class="logo" src="/assets/images/logo_name.svg">
+
+                    </div>
+                    <div class="g_id_signin btn_form_google login-with-google-btn" data-client_id=""
+                        data-login_uri="/google-login" data-ux_mode="redirect" data-width="320" data-type="standard"
+                        data-size="large" data-theme="filled_blue" data-text="sign_in_with" data-shape="rectangular"
+                        data-logo_alignment="left"> <img src="./assets/images/Google-icon.svg" alt=""> Login with Google
+                    </div>
+                    <div class="form-group" style="text-align:center;">
+                        <span class="or">
+                            <span class="or_text">OR</span>
+                        </span>
+                    </div>
+                    <form class="form_" action="">
+                        <input type="hidden" value="0" id="status_marker" />
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="ri-mail-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Enter Your Email </h5>
+                                <input class="usernamelogin " type="text" required placeholder="" id="form_name1"
+                                    name="user_email" style="padding-top: 6px;" value="" maxlength="50"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="input-div two">
+                            <div class="i">
+                                <i class="ri-lock-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Enter Password</h5>
+                                <input class="" type="password" required placeholder="" id="form_name2"
+                                    name="user_passcode" value="" maxlength="30" autocomplete="off">
+                                <span class="p-viewer">
+                                    <i toggle="#password-field" class="ri-eye-fill field_icon toggle-password"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="col-md-12" onclick="forgot_password()">Forgot
+                                Password?</a>
+                        </div>
+                        <!-- <div class="remember_me">
+                            <input type="checkbox" name="remember_me" id="remember_me"> Remember me
+                        </div> -->
+                        <button type="submit" class="btn_form btn_blue"
+                            onclick="return initiate_login();">Login</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="preloader">
+        <span class="loader"></span>
+    </div>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/pluggins/quill/quill.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

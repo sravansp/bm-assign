@@ -180,6 +180,35 @@ $('#hidemodalAssign').click(function () {
 
 
 
+// Input focus label animation 
+const inputs = document.querySelectorAll(".input-div input");
+function focusFunc() {
+  let parent = this.parentNode.parentNode;
+  parent.classList.add("focus");
+}
+function blurFunc() {
+  let parent = this.parentNode.parentNode;
+  parent.classList.add("focus");
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+// Password eye button 
+$("body").on('click', '.toggle-password', function() {
+  $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
+  var input = $("#form_name2");
+  if (input.attr("type") === "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+
+});
 
 
 
