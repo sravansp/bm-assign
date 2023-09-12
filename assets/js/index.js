@@ -278,4 +278,26 @@ function ScrollRevealaAm() {
         interval: 80,
 
     });
+    // Login Page 
+    sr.reveal(".logo_wrapper,.polygon2", {
+        origin: "right",
+        delay: 300,
+        duration: 1000,
+        interval: 100,
+
+    });
+    sr.reveal(".polygon1,.polygon3", {
+        origin: "left",
+        delay: 300,
+        duration: 1000,
+        interval: 100,
+
+    });
+    sr.reveal(".animate_form", {
+        origin: "bottom",
+        delay: 300,
+        duration: 1000,
+        interval: 100,
+
+    });
 }

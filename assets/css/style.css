@@ -1960,6 +1960,7 @@ body.dark .home .text {
 .title-h {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     color: var(--secondary-color);
     font-size: 32px;
@@ -1992,14 +1993,14 @@ body.dark .home .text {
 
 }
 
-.i {
+.input-div .i {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 38px;
+    width: 60px;
 }
 
-.i i {
+.input-div .i i {
     color: #d9d9d9;
     font-size: 18px;
 }
@@ -2264,6 +2265,9 @@ body.dark .home .text {
         gap: 10px;
         color: var(--secondary-color);
     }
+    .title-h h1 {
+        font-size: 24px;
+     }
 }
 @media screen and (max-width: 1050px) {
     .main_container .main {
@@ -2298,9 +2302,7 @@ body.dark .home .text {
 
     
   
-    .title-h h1 {
-       font-size: 24px;
-    }
+  
 
 }
 
