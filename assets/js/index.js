@@ -179,7 +179,7 @@ $('#hidemodalAssign').click(function () {
 });
 
 
-
+// ============== Login Page Js START========= 
 // Input focus label animation 
 const inputs = document.querySelectorAll(".input-div input");
 function focusFunc() {
@@ -211,7 +211,7 @@ $("body").on('click', '.toggle-password', function() {
 });
 
 
-
+// ============== Login Page Js End========= 
 
 
 
@@ -278,7 +278,7 @@ function ScrollRevealaAm() {
         interval: 80,
 
     });
-    // Login Page 
+    // ============== Login Page Animation START========= 
     sr.reveal(".logo_wrapper,.polygon2", {
         origin: "right",
         delay: 300,
@@ -300,4 +300,5 @@ function ScrollRevealaAm() {
         interval: 100,
 
     });
+    // ============== Login Page Animation End ========= 
 }

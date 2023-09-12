@@ -1732,7 +1732,7 @@ body.dark .home .text {
     }
 }
 
-/* =============Login Apge CSS=================  */
+/* =============Login Page CSS Start=================  */
 
 .main_container {
     display: inline-block;
@@ -2326,3 +2326,4 @@ body.dark .home .text {
         padding-right: 2rem;
     }
 }
+/* =============Login Page CSS End=================  */
